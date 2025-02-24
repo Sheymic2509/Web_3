@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flexible</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            line-height: 1.6;
+        }
+
+        .padre {
+            display: flex;
+            flex-direction: column;
+            background-color: #8a2be2;
+        }
+
+        .header {
+            background-color: #6a0dad;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .nav {
+            background-color: #9b4d96;
+            padding: 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .main {
+            display: flex;
+            flex: 1;
+            padding: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .left {
+            flex: 1;
+            max-width: 45%;
+            margin-right: 10px;
+        }
+
+        .center {
+            flex: 1;
+            max-width: 45%;
+            background-color: #dda0dd;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .right {
+            flex: 1;
+            max-width: 45%;
+            margin-left: 10px;
+        }
+
+        .contenedor {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .cont1 { background-color: #9c27b0; }
+        .cont2 { background-color: #7b1fa2; }
+        .cont3 { background-color: #6a1b9a; }
+        .cont4 { background-color: #8e24aa; }
+        .cont5 { background-color: #9c4dcc; }
+        .cont6 { background-color: #ab47bc; }
+        .cont7 { background-color: #8e24aa; height: 200px; margin-top: 20px; }
+
+        .footer {
+            background-color: #6a0dad;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .left, .center, .right {
+                max-width: 100%;
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="padre">
+        <div class="header">
+            <h1>Layout Flexible</h1>
+        </div>
+
+        <div class="nav">
+            <div>Nav</div>
+        </div>
+
+        <div class="main">
+            <div class="left">
+                <div class="contenedor cont1">
+                    <h2>Contenido 1</h2>
+                </div>
+                <div class="contenedor cont2">
+                    <h2>Contenido 2</h2>
+                </div>
+                <div class="contenedor cont3">
+                    <h2>Contenido 3</h2>
+                </div>
+            </div>
+
+            <div class="center">
+                <div class="contenedor cont7">
+                    <h2>Contenido 7</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, nemo? Quis, praesentium quibusdam. Nobis, iusto dicta est fugiat cupiditate ex molestiae, mollitia ullam ipsum accusamus eos eius fuga! Quidem, dolores.</p>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="contenedor cont4">
+                    <h2>Contenido 4</h2>
+                </div>
+                <div class="contenedor cont5">
+                    <h2>Contenido 5</h2>
+                </div>
+                <div class="contenedor cont6">
+                    <h2>Contenido 6</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h4>Este es el footer</h4>
+        </div>
+    </div>
+
+</body>
+</html>
