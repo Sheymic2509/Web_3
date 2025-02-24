@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Fluido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            line-height: 1.6;
+        }
+
+        .padre {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header, .footer {
+            width: 100%;
+            background-color: #04032b;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        .nav {
+            width: 100%;
+            background-color: #513ebd;
+            text-align: center;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .main {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            gap: 20px;
+        }
+
+        .right {
+            width: 65%;
+        }
+
+        .cont1, .cont2, .cont3, .cont-big, .cont4, .cont5 {
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .cont1 {
+            background-color: #4A90E2; /* Azul Claro */
+        }
+
+        .cont2 {
+            background-color: #357ABD; /* Azul Medio */
+        }
+
+        .cont3 {
+            background-color: #2C6DA6; /* Azul Oscuro */
+        }
+
+        .cont-big {
+            background-color: #6BB9F0; /* Celeste Claro */
+            height: 100%;
+        }
+
+        .cont4 {
+            background-color: #4A90E2; /* Azul Claro */
+        }
+
+        .cont5 {
+            background-color: #6BB9F0; /* Celeste Claro */
+        }
+
+        .footer {
+            margin-top: 20px;
+        }
+
+        .below {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cont4, .cont5 {
+            width: 48%;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .left, .right {
+                width: 100%;
+            }
+
+            .nav {
+                flex-direction: column;
+            }
+
+            .nav div {
+                width: 100%;
+            }
+
+            .bottom {
+                flex-direction: column;
+            }
+
+            .cont4, .cont5 {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="padre">
+        <div class="header">
+            <h1>Layout Fluido</h1>
+        </div>
+        
+        <div class="nav">
+            <div>Nav</div>
+        </div>
+        
+        <div class="main">
+            <div class="left">
+                <div class="cont1">
+                    <h2>Contenido 1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod euismod orci, ac convallis dolor consequat vitae.</p>
+                </div>
+                <div class="cont2">
+                    <h2>Contenido 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, id quod! Quibusdam dolorem praesentium sapiente voluptatum cupiditate molestias ullam, sed odit exercitationem amet fugiat veritatis dolorum cumque ad laboriosam placeat!</p>
+                </div>
+                <div class="cont3">
+                    <h2>Contenido 3</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi beatae quos explicabo minima autem sit earum nulla saepe nobis reprehenderit cumque mollitia, soluta vel sint consectetur suscipit, praesentium officiis dicta!</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="cont-big">
+                    <h2>Contenedor Grande</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit dolorum sed soluta omnis dicta. At reiciendis repudiandae officiis aliquam ipsa omnis ad maxime, facilis nostrum similique sequi rem magni accusamus!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="below">
+            <div class="cont4">
+                <h2>Contenedor 4</h2>
+                <p>Este es el contenedor </p>
+            </div>
+            <div class="cont5">
+                <h2>Contenedor 5</h2>
+                <p>Este es el contenedor 5 </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h4>Este es el footer</h4>
+        </div>
+    </div>
+</body>
+</html>
