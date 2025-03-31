@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar usuario</title>
+   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #FFC0CB;
+        }
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 900px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center">Registrar usuario</h2>
+        
+        <form id="userForm" autocomplete="off">
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Nombre" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" required autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="text" class="form-control" id="telefono" placeholder="Teléfono" required autocomplete="off">
+            </div>
+            <button type="submit" id="btnSubmit" class="btn btn-primary">Agregar</button>
+        </form>
+
+       +
+        <div class="table-responsive mt-4">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Teléfono</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTable"></tbody> 
+            </table>
+        </div>
+    </div>
+
+    <!-- Incluir jQuery y Bootstrap JS desde CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
